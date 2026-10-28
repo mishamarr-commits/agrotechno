@@ -13,8 +13,10 @@
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%}
+  body{overflow:hidden}
   body{position:relative;background:#CE2027;display:flex;align-items:center;justify-content:center;min-height:100vh;min-height:100dvh}
   .soon{position:absolute;left:0;right:0;bottom:6.05%;text-align:center;color:#fff;font-family:"Noto Sans",system-ui,sans-serif;font-weight:400;font-size:clamp(22px,2.5vw,36px);line-height:1.36}
+  .strip{position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;transform:translateY(49.3%);pointer-events:none}
   .logo{width:min(472px,78vw);height:auto;display:block}
 </style>
 </head>
@@ -23,5 +25,6 @@
     <h1><img class="logo" src="logo.svg" width="472" height="198" alt="აგროტექნო — Agrotechno"></h1>
     <p class="soon">coming soon</p>
   </main>
+  <img class="strip" src="strip.svg" width="1440" height="69" alt="">
 </body>
 </html>
