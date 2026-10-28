@@ -9,28 +9,40 @@
 <meta name="theme-color" content="#D9D9D9" media="(max-width:767px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{height:100%}
-  body{overflow:hidden}
-  body{position:relative;background:#CE2027;display:flex;align-items:center;justify-content:center;min-height:100vh;min-height:100dvh}
-  .soon{position:absolute;left:0;right:0;bottom:6.05%;text-align:center;color:#fff;font-family:"Noto Sans",system-ui,sans-serif;font-weight:400;font-size:clamp(22px,2.5vw,36px);line-height:1.36}
-  .strip{position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;transform:translateY(49.3%);pointer-events:none}
-  .logo{width:min(472px,78vw);height:auto;display:block}
+  body{position:relative;overflow:hidden;min-height:100vh;min-height:100dvh;background:#CE2027;font-family:"Onest",system-ui,sans-serif}
+  /* logo (Figma 3:40) centred */
+  .logo-wrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+  .logo{width:min(472px,32.8vw,46vh);height:auto;display:block}
+  /* dark band with bars (Figma 11:112 = bottom 295/1024) */
+  .band{position:absolute;left:0;right:0;bottom:0;height:28.8%;background:#2B313A;overflow:hidden}
+  .bars{position:absolute;left:2.72%;top:0;width:94.56%;height:99.74%;display:block}
+  .bars-m{display:none}
+  .soon{position:absolute;left:0;right:0;top:45.08%;text-align:center;color:#fff;font-weight:400;font-size:clamp(22px,2.5vw,36px);line-height:normal}
   @media (max-width:767px){
     body{background:#D9D9D9}
-    .logo{width:61.2vw}
-    .soon,.strip{display:none}
+    /* Figma 9:13: 246/402 wide, centre at 460.5/874; band 11:136 = bottom 310/874 */
+    .logo-wrap{top:52.69%}
+    .logo{width:min(61.2vw,28vh)}
+    .band{height:35.47%}
+    .bars{display:none}
+    .bars-m{display:block}
+    .soon{top:10.32%;font-size:clamp(20px,6vw,28px)}
   }
 </style>
 </head>
 <body>
   <main>
-    <h1><img class="logo" src="logo.svg" width="472" height="198" alt="აგროტექნო — Agrotechno"></h1>
-    <p class="soon">coming soon</p>
+    <h1 class="logo-wrap"><img class="logo" src="logo.svg" width="472" height="198" alt="აგროტექნო — Agrotechno"></h1>
+    <div class="band">
+      <img class="bars" src="bars.svg" width="1365" height="294" alt="">
+      <img class="bars bars-m" src="bars-mobile.svg" width="385" height="309" alt="">
+      <p class="soon">coming soon</p>
+    </div>
   </main>
-  <img class="strip" src="strip.svg" width="1440" height="69" alt="">
 </body>
 </html>
